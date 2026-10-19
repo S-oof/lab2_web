@@ -1,0 +1,160 @@
+/* =========================================================
+   1. КЕРУВАННЯ БЛОКОВОЮ МОДЕЛЛЮ ТА СЕЛЕКТОР ТЕГУ (*)
+   ========================================================= */
+
+*, *::before, *::after {
+  box-sizing: border-box; /* Явне керування box-sizing */
+  margin: 0;
+  padding: 0;
+}
+
+/* СЕЛЕКТОР ТЕГУ: body */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  color: #2c3e50;
+  line-height: 1.6;
+  padding: 20px; /* padding */
+}
+
+/* СЕЛЕКТОР КЛАСУ: .resume-wrapper */
+.resume-wrapper {
+  max-width: 900px;
+  margin: 0 auto; /* margin */
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e1e8ed; /* border */
+  overflow: hidden;
+}
+
+/* СЕЛЕКТОР ТЕГУ: header */
+header {
+  background-color: pink;
+  color: white;
+  padding: 30px; /* padding */
+  border-bottom: 4px solid #3b82f6; /* border */
+}
+
+.header-content h1 {
+  font-size: 2.2rem;
+  margin-bottom: 8px; /* margin */
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.contact-info {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: #000000;
+}
+
+/* СЕЛЕКТОР АТРИБУТУ: a[href^="mailto:"] */
+a[href^="mailto:"] {
+  color: #60a5fa;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ПСЕВДОКЛАС 1: :hover */
+a[href^="mailto:"]:hover {
+  color: #93c5fd;
+  text-decoration: underline;
+}
+
+/* СЕЛЕКТОР ТЕГУ: main */
+main {
+  padding: 30px; /* padding */
+}
+
+.profile-section {
+  background-color: #f8fafc;
+  border-left: 4px solid #3b82f6; /* border */
+  padding: 15px 20px; /* padding */
+  margin-bottom: 25px; /* margin */
+  border-radius: 4px;
+}
+
+/* СЕЛЕКТОР ІДЕНТИФІКАТОРА (ID): #Set_of_skills_and_background
+   Макет побудовано на CSS Grid */
+#Set_of_skills_and_background {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Сітка з 2 колонок */
+  gap: 20px;
+}
+
+/* СЕЛЕКТОР КЛАСУ: .info-card */
+.info-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0; /* border */
+  border-radius: 8px;
+  padding: 20px; /* padding */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* ПСЕВДОКЛАС 2: :nth-child(even) — чергування фону карточок */
+.info-card:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+/* СЕЛЕКТОР ТЕГІВ: h2, h3 */
+h2 {
+  font-size: 1.3rem;
+  color: #0f172a;
+  margin-bottom: 12px; /* margin */
+}
+
+h3 {
+  font-size: 1.05rem;
+  color: #334155;
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
+/* СЕЛЕКТОР ТЕГІВ: ul, li */
+ul {
+  padding-left: 20px; /* padding */
+}
+
+li {
+  margin-bottom: 6px; /* margin */
+}
+
+ul ul {
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
+/* СЕЛЕКТОР ТЕГУ: footer */
+footer {
+  text-align: center;
+  padding: 20px; /* padding */
+  background-color: #f1f5f9;
+  border-top: 1px solid #e2e8f0; /* border */
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+/* =========================================================
+   2. МЕДІАЗАПИТ (MEDIA QUERY) ДЛЯ ВУЗЬКИХ ЕКРАНІВ
+   ========================================================= */
+
+@media (max-width: 768px) {
+  /* Перехід з 2 колонок у 1 колонку на мобільних пристроях */
+  #Set_of_skills_and_background {
+    grid-template-columns: 1fr;
+  }
+
+  body {
+    padding: 10px;
+  }
+
+  header, main {
+    padding: 20px;
+  }
+
+  .header-content h1 {
+    font-size: 1.75rem;
+    display: block;
+    margin-right: 0;
+  }
+}

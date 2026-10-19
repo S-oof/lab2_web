@@ -2,24 +2,46 @@
 <html>
 
 <head>
-    <title>Лабораторна_2</title>
+    <title>Резюме</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    /* Внутрішній стиль для статусу пошуку роботи */
+     .status-badge {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-block;
+            font-family: Arial, sans-serif;
+    }
+    </style>
 </head>
 <body>
-
+    <div class="resume-wrapper" style="box-shadow: 0 8px 30px rgba(0,0,0,0.12);">
+    
     <header>
+        <div class = "header-content">
         <h1>Riepina Sofiia</h1> 
-        <p><b>Date of birth:</b> 14.07.2008 | <b>Natonality:</b> Ukranian |<b>Gender:</b> Female | <b>Phone number:</b> (+380)xxxxxxx (Mobile phone) | <b>Email address:</b> <a href="mailto:sofiia.riepina.kn.2025@lpnu.ua">sofiia.riepina.kb.2025@lpnu.ua</a></p>
+        <span class="status-badge">Available for Hire</span>
+        <p class = "contact-info">
+            <b>Date of birth:</b> 14.07.2008 | <b>Natonality:</b> Ukranian |<b>Gender:</b> Female | 
+            <b>Phone number:</b> (+380)xxxxxxx (Mobile phone) | 
+            <b>Email address:</b> <a href="mailto:sofiia.riepina.kn.2025@lpnu.ua">sofiia.riepina.kb.2025@lpnu.ua</a></p>
+        </div>
     </header>
 
     <hr>
 
     <main>
-        
-        <h2>Personal profile:</h2> 
-        <p>Ambitious cybersecurity student at Lviv Polytechnic National University with a strong grounding in programming languages like Python and C#. Practical skills in AWS Cloud Security, network analysis and basic ethical hacking. </p>
-       
+        <section>
+            <h2>Personal profile:</h2> 
+            <p>Ambitious cybersecurity student at Lviv Polytechnic National University with a strong grounding in programming languages like Python and C#. Practical skills in AWS Cloud Security, network analysis and basic ethical hacking. </p>
+       </section>
+
         <section id="Set_of_skills_and_background"> 
-            <article>
+            <article class = "info-card">
                 <h2>Education:</h2>
                 <p>Bachelor in Cybersecurity at Lviv Polytechnic National University (2025 - present)</p>
                 <h3>Certifications:</h3>
@@ -30,7 +52,7 @@
                 </ul>
             </article>
 
-            <article>
+            <article  class = "info-card">
                 <h2>Key skills:</h2>
                 <h3>Technical skills:</h3>
                 <ul>
@@ -60,7 +82,7 @@
                 </ul>
             </article>
 
-            <article>
+            <article class = "info-card">
                 <h2>Languages:</h2>
                 <ul>
                     <li>Ukranian - native</li>
@@ -68,7 +90,7 @@
                 </ul>
             </article>
 
-            <article>
+            <article class = "info-card">
                 <h2>Additional information:</h2>
                 <ul>
                     <li>Valid international passport</li>
@@ -80,9 +102,14 @@
 
     </main>
 
+    <hr>
+
+
     <footer>
-    
+        <p>&copy; 2026 Riepina Sofiia. All rights reserved.</p>
     </footer>
+
+    </div>
 
 </body>
 </html>
